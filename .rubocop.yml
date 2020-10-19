@@ -1,4 +1,4 @@
-# .rubocop.yml for non-RB101 courses (10 Jun 2020)
+# .rubocop.yml for non-RB101 courses (05 Oct 2020)
 
 AllCops:
   # Display cop names
@@ -42,9 +42,6 @@ Style/CommandLiteral:
 Style/CommentAnnotation:
   Description: >-
     Checks formatting of special comments (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
-  Enabled: false
-
-Style/RedundantFetchBlock:
   Enabled: false
 
 Style/Documentation:
@@ -164,6 +161,10 @@ Style/PerlBackrefs:
 Style/Proc:
   Description: Use proc instead of Proc.new.
   Enabled: false
+
+Style/RedundantFetchBlock:
+  Description: Only way to keep FetchBlock warning from popping up.
+  Enabled: true
 
 Style/RedundantParentheses:
   Enabled: false

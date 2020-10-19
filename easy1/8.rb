@@ -128,7 +128,7 @@ class Phrase
   private
 
   def word_list(str)
-    result_arr = str.scan(/'*\b[a-z0-9']+\b'*/)
+    result_arr = str.scan(/'?\b[a-z0-9']+\b'?/)
     result_arr.map! do |word|
       word[0] == "'" && word[-1] == "'" ? word[1..-2] : word
     end
@@ -140,3 +140,20 @@ counts = {
   "louis'" => 1, "classroom" => 1, "was" => 1, "tacky" => 1
 }
 p counts == phrase.word_count
+
+# LS Solution:
+# class Phrase
+#   def initialize(words)
+#     @words = words
+#   end
+
+#   def word_count
+#     count = Hash.new(0)
+
+#     @words.scan(/\b[\w']+\b/) do |word|
+#       count[word.downcase] += 1
+#     end
+
+#     count
+#   end
+# end

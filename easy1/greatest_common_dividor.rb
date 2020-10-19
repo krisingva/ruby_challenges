@@ -1,4 +1,5 @@
-# Build a method that will return the greatest common divider of two positive integers
+# Build a method that will return the greatest common divider of two positive
+# integers
 
 #take each number and a range from 1 upto number.
 # for each integer in range, determine if is divisible by number
@@ -27,6 +28,7 @@ end
 p gcd(9, 15) == 3
 p gcd(100, 11) == 1
 p gcd(14, 28) == 14
+p gcd(27, 70) == 1
 
 # LS:
 # def gcd(a,b)
